@@ -1,0 +1,18 @@
+name       : qgit
+version    : 2.9
+release    : 1
+source     :
+    - https://github.com/tibirna/qgit/archive/refs/tags/qgit-2.9.tar.gz : 69788efda7d434d1bc094bb414bd92c269dc7894326320634500b05d63c008e8
+license    : GPL-2.0
+component  : programming.tools
+summary    : Qt git client
+description: |
+    With qgit you will be able to browse revisions history, view patch content and changed files, graphically following different development branches.
+builddeps  :
+    - pkgconfig(Qt5Gui)
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
